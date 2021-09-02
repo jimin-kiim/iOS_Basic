@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(lineWidth: 3)
-            Text("Hello, world")
+        HStack{
+            CardView()
+            CardView()
+            CardView()
+            CardView()
         }
         .padding(.horizontal)
         .foregroundColor(.red)
@@ -23,8 +24,25 @@ struct ContentView: View {
 
 
 
-
-
+struct CardView : View {
+    @State var isFaceUp : Bool = true
+    var body: some View {
+        ZStack {
+            let shape = RoundedRectangle(cornerRadius: 20)
+            if isFaceUp {
+                shape.stroke(lineWidth: 3)
+                shape.fill().foregroundColor(.white)
+                Text("🥰")
+            } else {
+                shape.fill()
+            }
+        }
+        .onTapGesture {
+        isFaceUp = !isFaceUp
+        
+        }
+    }
+}
 
 
 
@@ -50,5 +68,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }

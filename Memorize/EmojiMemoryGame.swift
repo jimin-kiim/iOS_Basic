@@ -8,9 +8,10 @@
 import SwiftUI
 
 class EmojiMemoryGame {
-    var model: MemoryGame<String> = MemoryGame<String>(numberOfPairsOfCards: 4, createCardContent:{ (index: Int )-> String in //(~~:~~)-> ~~ in ~~ 'in' separates the arguments and the codes inside the function
-        return "🥰"
-    })
+    var model: MemoryGame<String> = MemoryGame<String>(numberOfPairsOfCards: 4) {_ in "🥰" }
+    //Swift already knows that createCardContent get Int argument and return String, so I don't have to state the types. also earase the parentheses around 'index'. also 'return'
+    //as the createCardContent is the last argument??? I can erase the name of the argument and take the content out of the paretheses
+    //I don't use 'index' so this can be '_'
     
     var cards: Array<MemoryGame<String>.Card> {
         return model.cards

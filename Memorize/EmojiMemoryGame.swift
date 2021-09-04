@@ -7,12 +7,10 @@
 
 import SwiftUI
 
-func makeCardContent(index: Int )-> String {
-    return "🥰"
-}
-
 class EmojiMemoryGame {
-    var model: MemoryGame<String> = MemoryGame<String>(numberOfPairsOfCards: 4, createCardContent: makeCardContent)
+    var model: MemoryGame<String> = MemoryGame<String>(numberOfPairsOfCards: 4, createCardContent:{ (index: Int )-> String in //(~~:~~)-> ~~ in ~~ 'in' separates the arguments and the codes inside the function
+        return "🥰"
+    })
     
     var cards: Array<MemoryGame<String>.Card> {
         return model.cards

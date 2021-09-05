@@ -18,9 +18,9 @@ struct MemoryGame<CardContent> {
     init (numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent){
         cards = Array<Card>()
         for pairIndex in 0..<numberOfPairsOfCards {
-            let content: CardContent = createCardContent(pairIndex)//I might never change the content so it's better to fix this as 'let' instead of 'var'
-            cards.append(Card(content: content)) //originally it was Card(isFaceUp: false, isMatched: false, content: content)but as I initialized the value in the struct below, I could erase two parts of them.
-            cards.append(Card(content: content))// as I need two matching cards so make them together with the same content
+            let content: CardContent = createCardContent(pairIndex)
+            cards.append(Card(content: content))
+            cards.append(Card(content: content))
         }
     }
     

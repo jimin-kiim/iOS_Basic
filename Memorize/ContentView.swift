@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    var viewModel : EmojiMemoryGame
+    let viewModel : EmojiMemoryGame
     
     var body: some View {
         VStack{
             ScrollView{
                 LazyVGrid(columns: [GridItem(.adaptive (minimum: 65))]) {
-                    ForEach(viewModel.cards, id: \.self) { emoji in
-                        CardView(content:emoji)
+                    ForEach(viewModel.cards) { card in
+                        CardView(card: card)
                             .aspectRatio(2/3, contentMode: .fit)
                     }
                 }
@@ -40,15 +40,16 @@ struct ContentView: View {
 
 
 struct CardView : View {
+    let card: MemoryGame<String>.Card
     
-    let game=
+    let game = EmojiMemoryGame()
     var body: some View {
         ZStack {
             let shape = RoundedRectangle(cornerRadius: 20)
-            if isFaceUp {
+            if card.isFaceUp {
                 shape.fill().foregroundColor(.white)
                 shape.strokeBorder(lineWidth: 3)
-                Text(content)
+                Text(card.content)
             } else {
                 shape.fill()
             }

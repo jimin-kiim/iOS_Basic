@@ -99,3 +99,25 @@ case let (x,y) where x == -y:
 case let (x,y):
     print("(\(x),\(y)) is just some arbitrary point")
 }
+print("==========================")
+var a = 0
+let b = 6
+
+while a<b {
+    print(a)
+    a+=1
+}
+
+a = 0
+
+repeat {
+    print(a)
+    a+=1
+}while a<b
+
+a = 0
+
+for _ in 0...5 {
+    print(a)
+    a+=1
+}

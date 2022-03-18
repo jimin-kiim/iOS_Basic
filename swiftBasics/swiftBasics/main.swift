@@ -22,7 +22,9 @@ let greetingMessage = "Nice to meet you ! 😆"
 let first_name = "Jimin", last_name = "Kim"
 
 var age :Int = 22
-var height:Float=164.4
+var height : Float? = 164.4
+//Optionals are used in situations in which a value may be absent.
+//An optional variable with no default value is automatically set to nil for you
 let female :Bool=true
 
 /* constant and variable names : almost any character, including Unicode characters
@@ -40,7 +42,7 @@ print("I'm \(age) years old")
 print(greetingMessage)
 print("Female?", female ? "y":"n")
 //ternary operator
-height > 100 ? print(height) : print("my height is less than 100cm")
+height != nil ? print(height ?? "0cm") : print("NULL")
 
 print("==========================")
 var num1=7

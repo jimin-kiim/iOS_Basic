@@ -71,3 +71,31 @@ print("==========================")
  AND &&
  OR ||
  */
+var distance=3
+
+if distance > 5 {
+    print("too far !")
+}else {
+    print("not too far")
+}
+
+switch distance {
+    case 0 :
+        print("not a valid distance")
+    case 1,2,3,4 :
+        print("not too far")
+default :
+    print("too far")
+}
+//Every switch statement must be exhaustive, i.e. take every possible value into consideration.
+//Swift doesn't require break statements
+
+let point = (2,4)
+switch point {
+case let (x,y) where x == y:
+    print("(\(x),\(y)) is on the line y=x")
+case let (x,y) where x == -y:
+    print("(\(x),\(y)) is on the line y=-x")
+case let (x,y):
+    print("(\(x),\(y)) is just some arbitrary point")
+}

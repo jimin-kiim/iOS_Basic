@@ -89,6 +89,8 @@ default :
 }
 //Every switch statement must be exhaustive, i.e. take every possible value into consideration.
 //Swift doesn't require break statements
+// because it doesn't fallthrough automatically like in C.
+// if I want 'fallthrough', then put it. before the next case.
 
 let point = (2,4)
 switch point {
@@ -120,4 +122,28 @@ a = 0
 for _ in 0...5 {
     print(a)
     a+=1
+}
+/*control transfer
+ continue, break, fallthrough, return
+ 
+ continue : stop the loop & restarts at the beginning of its next cycle.
+ break : immediately end the execution of an entire control flow statement.
+ */
+var num = 0
+while num < 10 {
+    if num % 2 == 0 {
+        continue
+        // skipping even numbers to print.
+    }
+    print(num)
+}
+
+var c = 7
+var d = 10
+while d > 0 {
+    if( d < c) {
+        break
+    }
+    a-=1
+    print(a)
 }

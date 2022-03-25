@@ -18,7 +18,8 @@ var name :String="Jimin"
 name="Jimin Kim"
 
 // constant
-let greetingMessage = "Nice to meet you ! 😆"
+var greetingMessage = "Nice to meet you !"
+greetingMessage += " 😆"
 let first_name = "Jimin", last_name = "Kim"
 
 var age :Int = 22
@@ -39,6 +40,7 @@ print("Hello"+" World")
 //string concatenation
 print("my name is",first_name,last_name)
 print("I'm \(age) years old")
+//string interpolation
 print(greetingMessage)
 print("Female?", female ? "y":"n")
 //ternary operator
@@ -132,10 +134,12 @@ for _ in 0...5 {
 var num = 0
 while num < 10 {
     if num % 2 == 0 {
+        num += 1
         continue
         // skipping even numbers to print.
     }
     print(num)
+    num += 1
 }
 
 var c = 7
@@ -144,6 +148,35 @@ while d > 0 {
     if( d < c) {
         break
     }
-    a-=1
-    print(a)
+    d-=1
+    print(d)
 }
+
+print("==========================")
+
+/*
+ String : an ordered collectio of characters.
+ ""
+ empty string : "" or String()
+ 
+ string concatenation : + , +=
+ string interpolation "\()"
+ string counting : string.count
+ string comparison : ==, !=, hasPrefix, hasSuffix
+ */
+
+var emptyString = ""
+emptyString = String()
+
+if emptyString.isEmpty {
+    print("String is empty")
+}else {
+    print(emptyString)
+}
+
+var some = "someChracters"
+
+print("the string has \(some.count) chracters")
+/*
+ When using the characters property, the character count does not always match the length property of an NSString containing the same characters. The length of an NSString is based on the number of 16-bit code units within the string's UTF-16 representation, as opposed to the number of Unicode extended grapheme clusters within the string.
+ */

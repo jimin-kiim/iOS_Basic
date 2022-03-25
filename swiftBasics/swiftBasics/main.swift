@@ -159,7 +159,7 @@ print("==========================")
  ""
  empty string : "" or String()
  
- string concatenation : + , +=
+ string concatenation : + , += ; creating a new array
  string interpolation "\()"
  string counting : string.count
  string comparison : ==, !=, hasPrefix, hasSuffix
@@ -180,3 +180,37 @@ print("the string has \(some.count) chracters")
 /*
  When using the characters property, the character count does not always match the length property of an NSString containing the same characters. The length of an NSString is based on the number of 16-bit code units within the string's UTF-16 representation, as opposed to the number of Unicode extended grapheme clusters within the string.
  */
+print("==========================")
+/*
+ Array : an ordered list of values of the same type.
+[T], Array<T> ; T : value type.
+ 
+ initializer
+    repeating : a default value of the appropriate type
+    count : the number of items to be added to the new array
+ 
+ array.count
+ array.isEmpty
+ array.append , +=
+ array[index]
+ array.insert(value, at: index)
+ array.remove(at:index)
+ array.removeLast()
+ */
+
+var array = [Int]()
+var array2 = [Double](repeating: 0.0, count: 4)
+var array3 = ["hi","my","name","is"]
+//type inference
+//var array3: [String] = ["hi","my","name","is"]
+
+array3[1...3]=["Banana","Orange"]
+print(array3)
+
+for item in array3 {
+    print(item)
+}
+
+for (index, value)in array3.enumerated(){
+    print("Item \(index+1): \(value)")
+}

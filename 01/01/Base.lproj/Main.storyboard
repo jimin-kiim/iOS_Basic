@@ -44,23 +44,23 @@
             </objects>
             <point key="canvasLocation" x="-184" y="88"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="xk9-bQ-Vfh">
             <objects>
-                <viewController id="Lf8-jH-wO7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="Lf8-jH-wO7" customClass="FirstViewController" customModule="_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bhz-PY-8ns">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-hg-gn1">
-                                <rect key="frame" x="151" y="298" width="77" height="31"/>
+                                <rect key="frame" x="151" y="298" width="77" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="모달 버튼">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="umg-UR-49N" kind="presentation" id="e95-UG-iDb"/>
+                                    <action selector="gotoSecondViewController:" destination="Lf8-jH-wO7" eventType="touchUpInside" id="iBW-2w-noZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,14 +70,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jbh-eK-pU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="94"/>
+            <point key="canvasLocation" x="669.56521739130437" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="qQ9-nY-EeM">
             <objects>
-                <viewController id="umg-UR-49N" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="umg-UR-49N" customClass="SecondViewController" customModule="_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gya-S9-EKz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="xlY-vv-ZzK"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>

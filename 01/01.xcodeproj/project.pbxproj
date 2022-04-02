@@ -13,6 +13,8 @@
 		4D2DF1B427F843A9004ABB92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DF1B227F843A9004ABB92 /* Main.storyboard */; };
 		4D2DF1B627F843AA004ABB92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DF1B527F843AA004ABB92 /* Assets.xcassets */; };
 		4D2DF1B927F843AA004ABB92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DF1B727F843AA004ABB92 /* LaunchScreen.storyboard */; };
+		4D2DF1C227F84FDB004ABB92 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DF1C127F84FDA004ABB92 /* FirstViewController.swift */; };
+		4D2DF1C427F84FE4004ABB92 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DF1C327F84FE4004ABB92 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		4D2DF1B827F843AA004ABB92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D2DF1BA27F843AA004ABB92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D2DF1C027F844A8004ABB92 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4D2DF1C127F84FDA004ABB92 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		4D2DF1C327F84FE4004ABB92 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				4D2DF1AE27F843A9004ABB92 /* SceneDelegate.swift */,
 				4D2DF1B027F843A9004ABB92 /* ViewController.swift */,
 				4D2DF1B227F843A9004ABB92 /* Main.storyboard */,
+				4D2DF1C127F84FDA004ABB92 /* FirstViewController.swift */,
+				4D2DF1C327F84FE4004ABB92 /* SecondViewController.swift */,
 				4D2DF1B527F843AA004ABB92 /* Assets.xcassets */,
 				4D2DF1B727F843AA004ABB92 /* LaunchScreen.storyboard */,
 				4D2DF1BA27F843AA004ABB92 /* Info.plist */,
@@ -143,6 +149,8 @@
 				4D2DF1B127F843A9004ABB92 /* ViewController.swift in Sources */,
 				4D2DF1AD27F843A9004ABB92 /* AppDelegate.swift in Sources */,
 				4D2DF1AF27F843A9004ABB92 /* SceneDelegate.swift in Sources */,
+				4D2DF1C427F84FE4004ABB92 /* SecondViewController.swift in Sources */,
+				4D2DF1C227F84FDB004ABB92 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

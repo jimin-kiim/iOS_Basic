@@ -16,7 +16,9 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func gotoSecondViewController(_ sender: Any) {
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController")else {return}
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") else {return}
+        nextVC.modalTransitionStyle = .crossDissolve
+        nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC,animated: true,completion: nil)
     }
     

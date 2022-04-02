@@ -67,3 +67,6 @@
 #### - 좌우 전환
 #### - Stack , 계층 구조. 
 #### - Navigation Stack : View Controller를 담는 배열. 
+#### - push, pop
+
+

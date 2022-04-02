@@ -9,6 +9,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var textInput: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +24,10 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func gotoSecondOne(_ sender: Any) {
-        guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") else {return}
+        guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as?SecondViewController else {return}
+        
+        secondViewController.message = textInput.text
+        
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     /*

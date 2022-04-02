@@ -9,9 +9,11 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var textLabel: UILabel!
+    var message: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+setMessage()
         // Do any additional setup after loading the view.
     }
     
@@ -21,6 +23,12 @@ class SecondViewController: UIViewController {
     
     @IBAction func goBacktoFirstOne(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    private func setMessage(){
+        if let message = message {
+            textLabel.text = message
+            textLabel.sizeToFit()
+        }
     }
     /*
     // MARK: - Navigation

@@ -22,6 +22,10 @@ class FirstViewController: UIViewController {
         self.present(nextVC,animated: true,completion: nil)
     }
     
+    @IBAction func gotoSecondOne(_ sender: Any) {
+        guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") else {return}
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
     /*
     // MARK: - Navigation
 

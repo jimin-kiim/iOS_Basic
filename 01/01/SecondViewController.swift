@@ -19,6 +19,9 @@ class SecondViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func goBacktoFirstOne(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 

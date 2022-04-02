@@ -55,8 +55,15 @@
 
 
 # 3. 화면 전환
+##### 점검 사항
+###### - ViewController Class 연결, ID에 class 이름 복붙. 
+
 ## 모달(Modal)
 #### - 상하 전환
 #### - 화면의 전환 느낌보다는 흐름의 중단과 이목 집중시키기의 역할. 
+#### - present, dismiss
+
 ## 네비게이션(Navigation)
 #### - 좌우 전환
+#### - Stack , 계층 구조. 
+#### - Navigation Stack : View Controller를 담는 배열. 
